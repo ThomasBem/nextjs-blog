@@ -141,7 +141,7 @@ There is an open source Coveralls plugin available on GitHub that looks promisin
 
 First we are going to add the plugin to our projects pom.xml file.
 
-```
+```xml
 <plugin>
   <groupId>org.eluder.coveralls</groupId
   <artifactId>coveralls-maven-plugin</artifactId>
@@ -153,7 +153,7 @@ Since we are using Travis CI we should not be required to add a repository token
 
 If you are using a different CI system than Travis on an open source project visible for anyone. Make sure that you add your Coveralls repository token to your CI´s environment variable configuration and not directly into your POM file. You should be able to refer to it like in the example below. Where MY_VARIABLE is the name of the property you setup in your CI system.
 
-```
+```xml
 <plugin>
     <groupId>org.eluder.coveralls</groupId>
     <artifactId>coveralls-maven-plugin</artifactId>
@@ -166,7 +166,7 @@ If you are using a different CI system than Travis on an open source project vis
 
 Then in our travis.yml file we add a after_success step to push our code coverage report to Coveralls. Once this is done commit your changes and push so that we trigger a new build.
 
-```
+```yml
 after_success:
   - mvn clean test jacoco:report coveralls:report
 ```
@@ -195,21 +195,20 @@ They are free to use for open source projects, but they support private reposito
 
 It required very little setup to get started with either of them for my example project using Travis CI and Java. Here is my entire travis.yml file integrating the three services that required any setup, Codecov, Codacy and Coveralls.
 
-```
+```yml
 language: java
 jdk:
- - oraclejdk8
+  - oraclejdk8
 before_install:
- - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
- - java -jar jpm4j.jar -u init
- - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
+  - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
+  - java -jar jpm4j.jar -u init
+  - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
 install: true
-script:
- ./mvnw package
+script: ./mvnw package
 after_success:
- - bash <(curl -s https://codecov.io/bash)
- - ~/jpm/bin/codacy-coverage-reporter -l Java -r target/site/jacoco/jacoco.xml
- - mvn clean test jacoco:report coveralls:report
+  - bash <(curl -s https://codecov.io/bash)
+  - ~/jpm/bin/codacy-coverage-reporter -l Java -r target/site/jacoco/jacoco.xml
+  - mvn clean test jacoco:report coveralls:report
 ```
 
 Based on the requirements we had when going into this for me the clear winner is Codacy. It ticks of every single requirement that we had for a coverage and quality metrics service.

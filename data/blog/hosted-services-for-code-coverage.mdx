@@ -58,7 +58,7 @@ Since the project I am using for this example [(github.com/ThomasBem/auth0-jwt-s
 
 To get Codecov integration working for my project I need to add the JaCoCo plugin to the pom.xml and add a after_success step in travis.yml.
 
-```
+```xml
 <plugin>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
@@ -80,13 +80,12 @@ To get Codecov integration working for my project I need to add the JaCoCo plugi
 </plugin>
 ```
 
-```
+```yml
 language: java
 jdk:
- - oraclejdk8
+  - oraclejdk8
 install: true
-script:
- ./mvnw package
+script: ./mvnw package
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
@@ -204,7 +203,7 @@ for that option.
 
 First set the application token you copied earlier as an environment variable in Travis. Then update travis.yml to contain the steps listed below.
 
-```gradle
+```yml
 before_install:
   - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
   - java -jar jpm4j.jar -u init
@@ -218,14 +217,14 @@ Make sure that you are targeting the right folder in the after_success step when
 
 I modified the after_success step from the example code:
 
-```
+```yml
 after_success:
   - ~/jpm/bin/codacy-coverage-reporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
 ```
 
 To something that fit my project:
 
-```
+```yml
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - ~/jpm/bin/codacy-coverage-reporter -l Java -r target/site/jacoco/jacoco.xml

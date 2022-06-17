@@ -6,7 +6,7 @@ draft: false
 summary: 'Accessing the code quality metrics through the Codacy API is fairly straight forward once you understand how it works.'
 ---
 
-In my last blog post, [Hosted services for code coverage and quality metrics - part 1](/blog/accessing-your-code-quality-metrics-through-the-codacy-api) I went through how to get up and running with both [Codecov](https://codecov.io) and [Codacy](https://www.codacy.com/). I finished the post with this summary:
+In my last blog post, [Hosted services for code coverage and quality metrics - part 1](/blog/hosted-services-for-code-coverage) I went through how to get up and running with both [Codecov](https://codecov.io) and [Codacy](https://www.codacy.com/). I finished the post with this summary:
 
 > At the time of me wrapping up this part 1 we are currently using Codacy. Its nice having both coverage and quality metrics in one tool. The one requirement that we have been struggling with though is API access for getting metrics onto our status displays.
 

@@ -16,9 +16,9 @@ draft: false
 summary: 'It ticks of every single requirement that we had for a coverage and quality metrics service.'
 ---
 
-Finishing of this series ended up taking longer than I initially thought. I got a little side tracked after my first post, [Hosted services for code coverage and quality metrics - Part 1.](http://www.thomasbembridge.com/hosted-services-for-code-coverage-and-quality-metrics-part-1/) Spent some time figuring out how the Codacy API worked, and wrote a blog post about that.
+Finishing of this series ended up taking longer than I initially thought. I got a little side tracked after my first post, [Hosted services for code coverage and quality metrics - Part 1.](/blog/hosted-services-for-code-coverage) Spent some time figuring out how the Codacy API worked, and wrote a blog post about that.
 
-Check out [Accessing your code quality metrics through the Codacy API](http://www.thomasbembridge.com/accessing-your-code-quality-metrics-through-the-codacy-api/) if your interested in learning more about that.
+Check out [Accessing your code quality metrics through the Codacy API](/blog/accessing-your-code-quality-metrics-through-the-codacy-api) if your interested in learning more about that.
 
 ### Part 2
 

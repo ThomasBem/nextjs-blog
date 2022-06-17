@@ -1,5 +1,5 @@
 ---
-title: Summary of thoughts and learnings after attending Sam Newmans - Designing Microservices workshop @ NDC 2017
+title: Summary after attending Sam Newmans - Designing Microservices workshop @ NDC 2017
 date: '2017-06-17'
 tags: ['sam newman', 'microservices', 'conference']
 draft: false

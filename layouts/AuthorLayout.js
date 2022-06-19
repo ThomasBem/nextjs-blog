@@ -1,6 +1,8 @@
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
+import experienceData from '@/data/experienceData'
+import Company from '@/components/Company'
 
 export default function AuthorLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
@@ -8,7 +10,7 @@ export default function AuthorLayout({ children, frontMatter }) {
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div>
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
@@ -34,6 +36,25 @@ export default function AuthorLayout({ children, frontMatter }) {
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>
+        </div>
+        <div>
+          <div className="space-y-2 pt-20 pb-1 md:space-y-5">
+            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Experience
+            </h1>
+          </div>
+          <div className="max-w-none pt-8 pb-2 xl:col-span-2">
+            {experienceData.map((experience) => {
+              return (
+                <Company
+                  key={experience.company}
+                  company={experience.company}
+                  link={experience.link}
+                  positions={experience.positions}
+                />
+              )
+            })}
+          </div>
         </div>
       </div>
     </>

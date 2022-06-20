@@ -18,6 +18,16 @@ const Company = ({ company, link, positions }) => {
                 {position.end !== null ? format(parseISO(position.end), 'MMM yyyy') : 'present'}
               </span>
             </div>
+            <div className="flex">
+              {position.technologies.map((technology, index) => (
+                <div key={index} className="flex">
+                  <span className="text-primary-500">{technology}</span>
+                  <span className="text-primary-500">
+                    {index + 1 < position.technologies.length ? <pre> - </pre> : ''}
+                  </span>
+                </div>
+              ))}
+            </div>
             <div>
               {position.tasks.map((task, index) => (
                 <div key={index} className="items-top flex flex-row">

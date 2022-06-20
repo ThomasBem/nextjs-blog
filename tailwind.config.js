@@ -15,6 +15,33 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      keyframes: {
+        'music-play-1': {
+          '0%, 100%': { height: '0%' },
+          '50%': { height: '70%' },
+        },
+        'music-play-2': {
+          '0%, 100%': { height: '50%' },
+          '25%': { height: '0%' },
+          '75%': { height: '100%' },
+        },
+        'music-play-3': {
+          '0%, 100%': { height: '70%' },
+          '15%': { height: '100%' },
+          '65%': { height: '0%' },
+        },
+        'music-play-4': {
+          '0%, 100%': { height: '50%' },
+          '35.7%': { height: '0%' },
+          '85.7%': { height: '70%' },
+        },
+      },
+      animation: {
+        'music-play-1': 'music-play-1 .8s linear infinite',
+        'music-play-2': 'music-play-2 .8s linear infinite',
+        'music-play-3': 'music-play-3 .8s linear infinite',
+        'music-play-4': 'music-play-4 .8s linear infinite',
+      },
       spacing: {
         '9/16': '56.25%',
       },

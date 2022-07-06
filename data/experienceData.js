@@ -11,7 +11,7 @@ const experienceData = [
           'Working on building the best digital onboarding solutions for customers in the business segment',
           'Full stack development using Spring Boot and React.',
         ],
-        technologies: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Docker'],
+        tags: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Docker'],
       },
     ],
   },
@@ -28,7 +28,7 @@ const experienceData = [
           `Working in cross functional teams with designers, data scientists and a product manager to develop and deliver digital services for internal and external users.`,
           `Full stack development using Spring Boot and React.`,
         ],
-        technologies: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Cloud Foundry'],
+        tags: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Cloud Foundry'],
       },
       {
         title: 'Software Architect',
@@ -39,7 +39,7 @@ const experienceData = [
           `Part of a 4-man development team working with designers, data scientists and a product manager to develop and deliver digital services for internal and external users.`,
           `Full stack development using Spring Boot and React.`,
         ],
-        technologies: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Cloud Foundry'],
+        tags: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Cloud Foundry'],
       },
       {
         title: 'Software Developer',
@@ -50,12 +50,12 @@ const experienceData = [
           `Part of a 4-man development team working with designers, data scientists and a product manager to develop and deliver digital services for internal and external users.`,
           `Full stack development using Spring Boot and React.`,
         ],
-        technologies: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Cloud Foundry'],
+        tags: ['React', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Cloud Foundry'],
       },
     ],
   },
   {
-    company: 'FMC Technologies',
+    company: 'FMC tags',
     link: 'https://www.technipfmc.com/',
     positions: [
       {
@@ -68,7 +68,7 @@ const experienceData = [
           'Worked for a year as technical responsible for software development in IWOCS Computer Systems Subsea Services department in Asker.',
           'Working with C# / .NET development for Well Access Managment System software.',
         ],
-        technologies: ['Wonderware System Platform', 'C#', '.NET', 'XAML'],
+        tags: ['Wonderware System Platform', 'C#', '.NET', 'XAML'],
       },
     ],
   },

@@ -1,5 +1,6 @@
 import Link from './Link'
 import { format, parseISO } from 'date-fns'
+import Tags from './Tags'
 
 const Company = ({ company, link, positions }) => {
   return (
@@ -18,16 +19,7 @@ const Company = ({ company, link, positions }) => {
                 {position.end !== null ? format(parseISO(position.end), 'MMM yyyy') : 'present'}
               </span>
             </div>
-            <div className="flex">
-              {position.technologies.map((technology, index) => (
-                <div key={index} className="flex">
-                  <span className="text-primary-500">{technology}</span>
-                  <span className="text-primary-500">
-                    {index + 1 < position.technologies.length ? <pre> - </pre> : ''}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <Tags tags={position.tags} />
             <div>
               {position.tasks.map((task, index) => (
                 <div key={index} className="items-top flex flex-row">

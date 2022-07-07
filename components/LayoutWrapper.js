@@ -6,8 +6,12 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useRouter } from 'next/router'
 
 const LayoutWrapper = ({ children }) => {
+  const router = useRouter()
+  const currentPath = router.pathname
+
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
@@ -34,7 +38,9 @@ const LayoutWrapper = ({ children }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 hover:text-primary-700 dark:text-gray-100 dark:hover:text-primary-500 sm:p-4"
+                  className={`${
+                    currentPath === link.href ? 'underline' : ''
+                  } p-1 font-medium text-gray-900 hover:text-primary-700 dark:text-gray-100 dark:hover:text-primary-500 sm:p-4`}
                 >
                   {link.title}
                 </Link>
